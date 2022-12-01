@@ -32,7 +32,7 @@ const Home: NextPage<WatermarkModuleStatus> = () => {
     /* Add files to FormData */
     const formData = new FormData()
     Object.values(inputFileRef.current.files).forEach((file) => {
-      const url = URL.createObjectURL(file)
+      const url: any = URL.createObjectURL(file)
       const watermark = new Watermark(mainCanvas as HTMLCanvasElement)
       let w: number = 0
       let h: number = 0
