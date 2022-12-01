@@ -34,7 +34,6 @@ const Home: NextPage<WatermarkModuleStatus> = () => {
     Object.values(inputFileRef.current.files).forEach((file) => {
       const url = URL.createObjectURL(file)
       const watermark = new Watermark(mainCanvas as HTMLCanvasElement)
-      // console.log({url : u});
       let w: number = 0
       let h: number = 0
       const img = document.createElement("img")
@@ -83,7 +82,7 @@ const Home: NextPage<WatermarkModuleStatus> = () => {
             <div>
               <input
                 type="submit"
-                value="Upload"
+                value="Generate"
                 disabled={isLoading}
                 onClick={handleOnClick}
                 className="upload-button"
